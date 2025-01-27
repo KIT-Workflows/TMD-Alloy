@@ -13,3 +13,20 @@ Returns:
         eta (float): The value of Lagrange multiplier.
     """'
 ```
+
+This function calculate the value of Lagrange multiplier η, which is related to the average composition constrain evaluated as x at temperature T.
+
+```python
+def xj(self, j, T, eta):
+ """
+    Calculates the Cluster probabilities for each class in GQCA.
+
+    Parameters:
+        j (int): number of class, in the same order of the input file gqca_inputs.yml.
+        T (float): Temperature in Kelvin.
+        eta (float): The value of Lagrange multiplier within GQCA.
+    Returns:
+        xj (float): The value of cluster probability for the j-th class of alloy.
+    """
+```
+
