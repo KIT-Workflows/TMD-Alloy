@@ -1,6 +1,10 @@
 # TMD-Alloy
 Transition Metal Dicalcogenite, Alloys, Density functional theory, GQCA
 
+# Colab
+
+- Colab notebook for data visualization .
+
 This notebook is used to compute the thermodynamic properties and statistical attributes from the ab initio calculations executed from the TMD-Alloy Workflow. Below, we describe the functions covered by the actual version.
 
 ```python
