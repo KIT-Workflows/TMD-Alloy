@@ -135,6 +135,6 @@ In this workflow, the SimStack framework generates configurations to analyze the
 To create the workflow depicted in Figure 1, you must use the drag-and-drop standard procedure of Simstack in eight steps.  
 
 <div style="text-align: center;">
-    <img src="workflow.png" alt="Workflow" width="30%">
+    <img src="workflow_test.png" alt="Workflow" width="30%">
 </div>
 
