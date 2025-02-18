@@ -129,10 +129,8 @@ def second_derivative(self, x, T):
 ```
 
 # TMD-Alloys Workflow
-<div style="text-align: center;">
-   <img src="workflow.png" alt="Descrição da Imagem" width="30%">
-</div>
 
+In this workflow, the SimStack framework generates configurations to analyze the thermodynamic properties of binary alloys within the Generalized Quasichemical Approximation (GQCA). For this, five different WaNos are combined: SOD-2022, Mult-It, UnpackMol, DFT-VASP, Wannier90, WanTIBEXOS, FHI-Aims, and Table-Generator. A table containing the clusters' total energies, degeneracy factors, and several site substitutions is the expected output of this protocol.
 
-
+To create the workflow depicted in Figure 1, you must use the drag-and-drop standard procedure of Simstack in eight steps.  
 
