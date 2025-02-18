@@ -129,7 +129,7 @@ def second_derivative(self, x, T):
 ```
 
 # TMD-Alloys Workflow
-
+<img src="workflow.png" alt="Descrição da Imagem" width="30%">
 ![Descrição da imagem](workflow.png)
 
 
