@@ -3,7 +3,7 @@ Transition Metal Dicalcogenite, Alloys, Density functional theory, GQCA
 
 # Colab
 
-- Colab notebook for data visualization .
+- Colab notebook for data visualization [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Bz39pi6LZct-AGXewyKuhHlPpkbgiuYF#scrollTo=O1wf4JJ_l3Gk).
 
 This notebook is used to compute the thermodynamic properties and statistical attributes from the ab initio calculations executed from the TMD-Alloy Workflow. Below, we describe the functions covered by the actual version.
 
