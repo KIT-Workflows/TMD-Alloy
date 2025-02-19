@@ -137,23 +137,23 @@ To create the workflow depicted in Figure 1, you must use the drag-and-drop stan
 ![Workflow](workflow_test.png)
 
 
-# 1. Python Setup
-# 2. SOD-2022 Inputs
-# 3. SOD-2022 Output
-# 4. Mult-It Inputs
-# 5. Mult-It Outputs
-# 6. UnpackMol Inputs
-# 7. UnpackMol Outputs
-# 8. DFT-VASP Inputs
-# 9. DFT-VASP Outputs
-# 10. DFT-FHI Inputs
-# 11. DFT-FHI Outputs
-# 12. MLWF-Wannier90 Inputs
-# 13. MLWF-Wannier90 Outputs
-# 14. WanTIBEXOS Inputs
-# 15. WanTIBEXOS Outputs
-# 16. Table-Generator Inputs
-# 17. Table-Generator Outputs
+## 1. Python Setup
+## 2. SOD-2022 Inputs
+## 3. SOD-2022 Output
+## 4. Mult-It Inputs
+## 5. Mult-It Outputs
+## 6. UnpackMol Inputs
+## 7. UnpackMol Outputs
+## 8. DFT-VASP Inputs
+## 9. DFT-VASP Outputs
+## 10. DFT-FHI Inputs
+## 11. DFT-FHI Outputs
+## 12. MLWF-Wannier90 Inputs
+## 13. MLWF-Wannier90 Outputs
+## 14. WanTIBEXOS Inputs
+## 15. WanTIBEXOS Outputs
+## 16. Table-Generator Inputs
+## 17. Table-Generator Outputs
 
 # Acknowledgements
 Developer: Celso Ricardo C. Rêgo, Multiscale Materials Modelling and Virtual Design, Institute of Nanotechnology, Karlsruhe Institute of Technology [https://www.int.kit.edu/wenzel.php](https://www.int.kit.edu/wenzel.php).
