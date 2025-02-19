@@ -138,6 +138,7 @@ To create the workflow depicted in Figure 1, you must use the drag-and-drop stan
 
 
 ## 1. Python Setup
+
 To get this workflow up and running on your available computational resources, install the below libraries on Python 3.6 or newer.
 ```python
 1. Atomic Simulation Environment (ASE).
@@ -145,28 +146,68 @@ To get this workflow up and running on your available computational resources, i
 3. Numpy, os, sys, re, yaml, subprocess.
 4. json, csv, shutil, tarfile. 
 ```
+
 ## 2. SOD-2022 Inputs
+
 - INSOD file, containing system definition, supercell size, number of substitutions, and specie replacements, as explained in Site Occupation Disorder (SOD) [software manual](https://github.com/gcmt-group/sod).
 - SGO file containing the matrix-vector representations of the symmetry operators associated with the space group of the parent structure associated with the alloy. You can create this file using the [Bilbao Crystallographic Server](https://www.cryst.ehu.es/). As explained in [SOD manual](https://github.com/gcmt-group/sod), the first three numbers in each line are one row of the operator matrix, and the fourth number is the component of the operator translation vector.
   
 ## 3. SOD-2022 Output
-All information to the next WaNo will be contained in the `calcs.tar` file.
 
+- All information to the next WaNo will be contained in the `calcs.tar` file.
 
 ## 4. Mult-It Inputs
+
+- You need to check the box _Structures_.
+- In the tarfile field, configure the path `SOD-2022/outputs/calcs.tar` if it is not properly configured.
+  
 ## 5. Mult-It Outputs
+
+- Configure the `file` name from the file command on the top of the AdvancedFor loop, as indicated in Figure 1.
+- From the in command on the top of the loop, configure `list(range(Mult-It.struct_len))`.
+
 ## 6. UnpackMol Inputs
+
+- Check the box Multivariable-mode.
+- The input-file variable should be set as `Mult-It/outputs/structure_output_dict.yml`.
+- Structures-int variable should be set as `${file}`.
+- Structures variable should be set as `Mult-It/outputs/Structures.tar`.
+
 ## 7. UnpackMol Outputs
+
+POSCAR files (named as Mol_geom.xyz) should be passed to DFT-VASP __WaNo__.
+
 ## 8. DFT-VASP Inputs
+
+- __INCAR tab__: as an option, we can set all INCAR flags available within VASP. However, we expose only a few of them, which is essential for the problem. See the GUI of this WaNo. A brief description of each flag pops up when we hover the mouse over the inputs.
+- __KPOINTS tab__: Here, the user can define two types of KPOINTS, `Kpoints_length` and `Kpoints_Monkhorst`.
+- __Analysis tab__: Aimed to compute Bader charge analysis and DOS.
+- __Files_Run tab__: Mandatory loads the POSCAR file, and as an option, can load INCAR, POTCAR, KPOINTS, and KORINGA files. The KORINGA file can be any file. In the case of this problem, it loads the Input_data.yml file. Poscar_file variable should be set as `AdvancedForEach/${file_ITER}/UnpackMol/outputs/Mol_geom.xyz`.
+
 ## 9. DFT-VASP Outputs
+
+- OUTCAR file.
+
 ## 10. DFT-FHI Inputs
+
 ## 11. DFT-FHI Outputs
+
 ## 12. MLWF-Wannier90 Inputs
+
 ## 13. MLWF-Wannier90 Outputs
+
 ## 14. WanTIBEXOS Inputs
+
 ## 15. WanTIBEXOS Outputs
+
 ## 16. Table-Generator Inputs
+
+- __Imports tab__: Search_in_File variable should be set as vasp_results.yml and import this file using `AdvancedForEach/*/DFT-VASP/outputs/vasp_results.yml` command.
+- Search_Parameters: Set the variables `total_energy` and `title`.
+
 ## 17. Table-Generator Outputs
+
+- Table-dict.yml containing the variables defined in the Search_Parameters field above, as shown in __Figure 1__.
 
 # Acknowledgements
 Developer: Celso Ricardo C. Rêgo, Multiscale Materials Modelling and Virtual Design, Institute of Nanotechnology, Karlsruhe Institute of Technology [https://www.int.kit.edu/wenzel.php](https://www.int.kit.edu/wenzel.php).
