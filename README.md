@@ -138,8 +138,21 @@ To create the workflow depicted in Figure 1, you must use the drag-and-drop stan
 
 
 ## 1. Python Setup
+To get this workflow up and running on your available computational resources, install the below libraries on Python 3.6 or newer.
+```python
+1. Atomic Simulation Environment (ASE).
+2. Python Materials Genomics (Pymatgen).
+3. Numpy, os, sys, re, yaml, subprocess.
+4. json, csv, shutil, tarfile. 
+```
 ## 2. SOD-2022 Inputs
+- INSOD file, containing system definition, supercell size, number of substitutions, and specie replacements, as explained in Site Occupation Disorder (SOD) [software manual](https://github.com/gcmt-group/sod).
+- SGO file containing the matrix-vector representations of the symmetry operators associated with the space group of the parent structure associated with the alloy. You can create this file using the [Bilbao Crystallographic Server](https://www.cryst.ehu.es/). As explained in [SOD manual](https://github.com/gcmt-group/sod), the first three numbers in each line are one row of the operator matrix, and the fourth number is the component of the operator translation vector.
+  
 ## 3. SOD-2022 Output
+All information to the next WaNo will be contained in the `calcs.tar` file.
+
+
 ## 4. Mult-It Inputs
 ## 5. Mult-It Outputs
 ## 6. UnpackMol Inputs
