@@ -135,7 +135,7 @@ In this workflow, the SimStack framework generates configurations to analyze the
 To create the workflow depicted in Figure 1, you must use the drag-and-drop standard procedure of Simstack in eight steps.  
 
 ![Workflow](workflow.png)
-*Figura 1: Esta é a legenda da imagem.*
+*Figure 1 This workflow aims to perform several calculations of cluster configurations within the GQCA framework. It is made from SOD-2022, Mult-It, UnpackMol, DFT-VASP, Wannier90, WanTIBEXOS, FHI-Aims, and DB-Generator WaNos connected by the AdvancedFor loop control.*
 
 ## 1. Python Setup
 
