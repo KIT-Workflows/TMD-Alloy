@@ -135,7 +135,7 @@ In this workflow, the SimStack framework generates configurations to analyze the
 To create the workflow depicted in Figure 1, you must use the drag-and-drop standard procedure of Simstack in eight steps.  
 
 ![Workflow](workflow.png)
-
+*Figura 1: Esta é a legenda da imagem.*
 
 ## 1. Python Setup
 
