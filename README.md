@@ -190,17 +190,34 @@ POSCAR files (named as Mol_geom.xyz) should be passed to DFT-VASP __WaNo__.
 
 ## 10. DFT-FHI Inputs
 
+- __control.in__ file.
+- __geometry.in__ file.
+
 ## 11. DFT-FHI Outputs
+
+- bands.out file.
 
 ## 12. MLWF-Wannier90 Inputs
 
+- __wannier90.win__ file.
+
 ## 13. MLWF-Wannier90 Outputs
+
+- __wannier90.wout__ file.
 
 ## 14. WanTIBEXOS Inputs
 
+- __input.dat__ file.
+- __kpoint.dat__ file.
+- __tb_hr.dat__ file.
+
 ## 15. WanTIBEXOS Outputs
 
+- __output__ file.
+
 ## 16. Table-Generator Inputs
+
+- OUTCAR file.
 
 - __Imports tab__: Search_in_File variable should be set as vasp_results.yml and import this file using `AdvancedForEach/*/DFT-VASP/outputs/vasp_results.yml` command.
 - Search_Parameters: Set the variables `total_energy` and `title`.
