@@ -210,5 +210,6 @@ POSCAR files (named as Mol_geom.xyz) should be passed to DFT-VASP __WaNo__.
 - Table-dict.yml containing the variables defined in the Search_Parameters field above, as shown in __Figure 1__.
 
 # Acknowledgements
-Developer: Celso Ricardo C. Rêgo, Multiscale Materials Modelling and Virtual Design, Institute of Nanotechnology, Karlsruhe Institute of Technology [https://www.int.kit.edu/wenzel.php](https://www.int.kit.edu/wenzel.php).
+
 # License & Copyright
+Developer: Celso Ricardo C. Rêgo, Multiscale Materials Modelling and Virtual Design, Institute of Nanotechnology, Karlsruhe Institute of Technology [https://www.int.kit.edu/wenzel.php](https://www.int.kit.edu/wenzel.php).
