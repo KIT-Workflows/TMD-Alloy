@@ -1,0 +1,5 @@
+matplotlib
+PyYAML
+ase
+pymatgen
+psutil

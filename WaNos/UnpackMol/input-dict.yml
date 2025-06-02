@@ -1,0 +1,6 @@
+iter:
+- geom/geom_105.xyz
+- geom/orca.xyz
+- geom/geom_135.xyz
+- geom/bia.xyz
+struct_len: 4

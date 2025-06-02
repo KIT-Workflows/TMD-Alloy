@@ -1,0 +1,22 @@
+substitutions: '           2  substitutions in           32 sites'
+configurations: '           5  configurations'
+2:
+- '48'
+- '1'
+- '4'
+5:
+- '192'
+- '1'
+- '13'
+1:
+- '48'
+- '1'
+- '2'
+3:
+- '16'
+- '1'
+- '8'
+4:
+- '192'
+- '1'
+- '9'

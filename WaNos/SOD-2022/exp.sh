@@ -1,0 +1,1 @@
+export PATH=$PATH:/home/ws/gt5111/simstack_workspace/2022-11-16-17h24m36s-SOD/exec_directories/2022-11-16-17h24m39s-SOD-2022/sod-master/bin

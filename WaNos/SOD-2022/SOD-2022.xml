@@ -1,0 +1,80 @@
+<WaNoTemplate>
+
+   <WaNoMeta>
+      <Author>
+         <Name> Celso R. C. Rego,
+               
+         </Name>
+         <Email>celsorego@kit.edu,
+            guedes.sobrinho.d@gmail.com,
+            araujo.phys.chem@gmail.com
+         </Email>
+      </Author>
+
+      <Description>
+         This a WaNo for the computer modelling of periodic systems with site disorder, using the supercell ensemble method via SOD.
+      </Description>
+
+      <Keyword>systems with site disorder, SOD</Keyword>
+  </WaNoMeta>
+
+   <WaNoRoot name="SOD-2022">
+
+      <WaNoBool name="Load SGO file">False</WaNoBool> 
+      
+      <WaNoDictBox name="SGO-input">
+         
+         <WaNoFile logical_filename="SGO" visibility_condition="%s == True" visibility_var_path="Load SGO file" name="SGO file" description="SGO input file">/home/celso/Wanos_2020/SOD-2022/SGO</WaNoFile>
+         
+         <WaNoDropDown visibility_condition="%s == False" visibility_var_path="Load SGO file" name="Space group" description = "Options for the space group symbols">
+            <Entry id="0" chosen="True">F4*3m</Entry>
+            <Entry id="1">Fm3*m</Entry>
+            <Entry id="2">I4*2m</Entry>
+            <Entry id="3">I4_mcm</Entry>
+            <Entry id="4">Im3*m</Entry>
+            <Entry id="5">Ima2</Entry>
+            <Entry id="6">P1</Entry>
+            <Entry id="7">P1*</Entry>
+            <Entry id="8">P4*</Entry>
+         </WaNoDropDown>
+      </WaNoDictBox>
+      
+
+      <WaNoBool name="Load INSOD file">False</WaNoBool>
+      <WaNoDictBox name="INSOD-input">
+         <WaNoFile logical_filename="INSOD" visibility_condition="%s == True" visibility_var_path="Load INSOD file" name="INSOD file" description="SOD input file">/home/celso/Wanos_2020/SOD-2022/INSOD</WaNoFile>  
+         <WaNoString visibility_condition="%s == False" visibility_var_path="Load INSOD file" name="Title">Title</WaNoString>
+         <WaNoString visibility_condition="%s == False" visibility_var_path="Load INSOD file" name="Symbols to replace">Title</WaNoString>
+         <WaNoInt visibility_condition="%s == False" visibility_var_path="Load INSOD file" name="Index" description="Specie index to be replaced">1</WaNoInt>
+        
+         <WaNoMultipleOf visibility_condition="%s == False" visibility_var_path="Load INSOD file" name="Symbols to replace">
+            <Element id="0">
+               <WaNoString name="x">Pb</WaNoString>
+               <WaNoString name="y">Sn</WaNoString>
+            </Element>
+         </WaNoMultipleOf>
+      </WaNoDictBox>
+      
+   </WaNoRoot>
+   <WaNoExecCommand>
+      module load gnu8
+      export NANOVER=V4
+	   source $NANOMATCH/$NANOVER/local_anaconda/bin/activate
+	   conda activate simstack_kit
+		
+      python inputs_sod.py
+      python outputs_sod.py
+   </WaNoExecCommand>
+   
+   <WaNoInputFiles> 
+      <WaNoInputFile logical_filename="inputs_sod.py">inputs_sod.py</WaNoInputFile>
+      <WaNoInputFile logical_filename="outputs_sod.py">outputs_sod.py</WaNoInputFile>
+      <WaNoInputFile logical_filename="sod-master.zip">sod-master.zip</WaNoInputFile>
+   </WaNoInputFiles>
+   
+   <WaNoOutputFiles>
+      <WaNoOutputFile>OUTSOD</WaNoOutputFile>
+      <WaNoOutputFile>outsod_results.yml</WaNoOutputFile>
+      <WaNoOutputFile>calcs.tar</WaNoOutputFile>
+   </WaNoOutputFiles>
+</WaNoTemplate>
